@@ -1,0 +1,17 @@
+<table class='table'>
+
+    <tr>
+        <% @table.columns.times do |num| %>
+            <td><%= num + 1 %></td>
+        <% end %>
+    </tr>
+
+    <% @table.column_order.each  do |row| %>
+        <tr>
+        <% row.each do |letter| %>
+            <td><%= letter %></td>
+        <% end %>
+        <tr>
+    <% end %>
+
+</table>
